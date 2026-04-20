@@ -1,0 +1,80 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Definitions for Gradients -->
+    <defs>
+        <linearGradient id="grad-blue" x1="0%" y1="0%" x2="100%" y2="100%">
+            <stop offset="0%" style="stop-color:#0176d3;stop-opacity:1" />
+            <stop offset="100%" style="stop-color:#00a1e0;stop-opacity:1" />
+        </linearGradient>
+        <linearGradient id="grad-gold" x1="0%" y1="0%" x2="100%" y2="100%">
+            <stop offset="0%" style="stop-color:#FFB75E;stop-opacity:1" />
+            <stop offset="100%" style="stop-color:#ED8F03;stop-opacity:1" />
+        </linearGradient>
+        <linearGradient id="grad-green" x1="0%" y1="0%" x2="100%" y2="100%">
+            <stop offset="0%" style="stop-color:#4bca81;stop-opacity:1" />
+            <stop offset="100%" style="stop-color:#00a120;stop-opacity:1" />
+        </linearGradient>
+    </defs>
+
+    <!-- Social Icons -->
+    <symbol id="icon-linkedin" viewBox="0 0 24 24">
+        <path fill="currentColor" d="M19,3A2,2 0 0,1 21,5V19A2,2 0 0,1 19,21H5A2,2 0 0,1 3,19V5A2,2 0 0,1 5,3H19M18.5,18.5V13.2A3.26,3.26 0 0,0 15.24,9.94C14.39,9.94 13.4,10.46 12.92,11.24V10.13H10.13V18.5H12.92V13.57C12.92,12.8 13.54,12.17 14.31,12.17A1.4,1.4 0 0,1 15.71,13.57V18.5H18.5M6.88,8.56A1.68,1.68 0 0,0 8.56,6.88C8.56,5.95 7.81,5.19 6.88,5.19A1.69,1.69 0 0,0 5.19,6.88C5.19,7.81 5.95,8.56 6.88,8.56M8.27,18.5V10.13H5.5V18.5H8.27Z" />
+    </symbol>
+    <symbol id="icon-twitter" viewBox="0 0 24 24">
+        <path fill="currentColor" d="M22.46,6C21.69,6.35 20.86,6.58 20,6.69C20.88,6.16 21.56,5.32 21.88,4.31C21.05,4.81 20.13,5.16 19.16,5.36C18.37,4.5 17.26,4 16,4C13.59,4 11.64,5.95 11.64,8.35C11.64,8.69 11.67,9.03 11.76,9.36C8.12,9.17 4.91,7.43 2.76,4.81C2.38,5.45 2.17,6.2 2.17,7C2.17,8.5 2.93,9.83 4.09,10.6C3.39,10.58 2.73,10.39 2.16,10.08C2.16,10.1 2.16,10.12 2.16,10.14C2.16,12.21 3.63,13.94 5.59,14.33C5.23,14.42 4.85,14.47 4.47,14.47C4.19,14.47 3.93,14.45 3.67,14.39C4.22,16.08 5.79,17.32 7.65,17.35C6.2,18.48 4.38,19.15 2.4,19.15C2.06,19.15 1.73,19.13 1.4,19.09C3.29,20.3 5.53,21 7.93,21C15.77,21 20.06,14.5 20.06,8.88C20.06,8.7 20.06,8.5 20.05,8.32C20.88,7.72 21.6,6.97 22.46,6Z" />
+    </symbol>
+
+    <!-- Dynamic Service Icons -->
+    <symbol id="service-ops" viewBox="0 0 48 48">
+        <circle cx="24" cy="24" r="20" fill="url(#grad-blue)" opacity="0.1"/>
+        <path fill="url(#grad-blue)" d="M24 4C12.95 4 4 12.95 4 24s8.95 20 20 20 20-8.95 20-20S35.05 4 24 4zm0 36c-8.82 0-16-7.18-16-16S15.18 8 24 8s16 7.18 16 16-7.18 16-16 16z"/>
+        <path fill="url(#grad-blue)" d="M25 12h-2v10.59L15.29 30.3l1.42 1.41L25 23.41V12z">
+            <animate attributeName="opacity" values="1;0.5;1" dur="2s" repeatCount="indefinite" />
+        </path>
+        <circle cx="24" cy="24" r="3" fill="url(#grad-blue)"/>
+    </symbol>
+
+    <symbol id="service-rd" viewBox="0 0 48 48">
+        <rect x="8" y="8" width="32" height="32" rx="4" fill="url(#grad-blue)" opacity="0.1"/>
+        <path fill="url(#grad-blue)" d="M34 10H14c-2.21 0-4 1.79-4 4v20c0 2.21 1.79 4 4 4h20c2.21 0 4-1.79 4-4V14c0-2.21-1.79-4-4-4zm-2 22H16v-2h16v2zm0-4H16v-2h16v2zm0-4H16v-2h16v2zm0-4H16v-2h16v2z"/>
+        <path fill="url(#grad-blue)" d="M10 14h28v4H10z" opacity="0.3"/>
+        <circle cx="14" cy="14" r="1" fill="#fff"/>
+        <circle cx="18" cy="14" r="1" fill="#fff"/>
+        <circle cx="22" cy="14" r="1" fill="#fff"/>
+    </symbol>
+
+    <symbol id="service-innovation" viewBox="0 0 48 48">
+        <path fill="url(#grad-gold)" opacity="0.1" d="M24 4C15.16 4 8 11.16 8 20c0 5.42 2.69 10.21 6.83 13.09C15.7 34.1 16 35.15 16 36v4c0 1.1.9 2 2 2h12c1.1 0 2-.9 2-2v-4c0-.85.3-1.9.17-2.91C37.31 30.21 40 25.42 40 20c0-8.84-7.16-16-16-16z"/>
+        <path fill="url(#grad-gold)" d="M24 6c-7.73 0-14 6.27-14 14 0 4.74 2.35 8.93 5.97 11.45.65.45.97 1.25.97 2.05v4c0 .55.45 1 1 1h12c.55 0 1-.45 1-1v-4c0-.8.32-1.6.97-2.05C35.65 28.93 38 24.74 38 20c0-7.73-6.27-14-14-14zm-3 29h6v2h-6v-2zm0 4h6v2h-6v-2z"/>
+        <path fill="#fff" d="M24 10l-2 4h4l-2 4 4-2-2 6" opacity="0.8">
+             <animate attributeName="opacity" values="0.4;1;0.4" dur="1.5s" repeatCount="indefinite" />
+        </path>
+    </symbol>
+
+    <!-- Elite Team Origins -->
+    <symbol id="icon-samsung" viewBox="0 0 48 48">
+        <ellipse cx="24" cy="24" rx="22" ry="12" fill="url(#grad-blue)"/>
+        <text x="50%" y="55%" text-anchor="middle" fill="white" font-family="Arial" font-size="8" font-weight="bold">SAMSUNG</text>
+    </symbol>
+    <symbol id="icon-deepmind" viewBox="0 0 48 48">
+        <circle cx="24" cy="24" r="20" fill="url(#grad-blue)" opacity="0.2"/>
+        <circle cx="24" cy="24" r="10" fill="url(#grad-blue)"/>
+        <path d="M24 4v40M4 24h40" stroke="white" stroke-width="1" opacity="0.3"/>
+    </symbol>
+    <symbol id="icon-huawei" viewBox="0 0 48 48">
+        <path fill="#E8402A" d="M24 4c-1.2 0-2.3.2-3.3.6l3.3 8.4 3.3-8.4C26.3 4.2 25.2 4 24 4zm-8.4 3.7c-.8.6-1.5 1.3-2.1 2.1l8.4 3.3-6.3-5.4zm16.8 0l-6.3 5.4 8.4-3.3c-.6-.8-1.3-1.5-2.1-2.1zM9.3 13.3c-.6.8-1 1.7-1.3 2.7l8.4 3.3-7.1-6zm29.4 0l-7.1 6 8.4-3.3c-.3-1-.7-1.9-1.3-2.7zM7.1 20.7c-.1 1.1-.1 2.2 0 3.3l8.4 0-8.4-3.3zm33.8 0l-8.4 3.3 8.4 0c.1-1.1.1-2.2 0-3.3z"/>
+    </symbol>
+
+    <!-- Certification Badges -->
+    <symbol id="icon-iso" viewBox="0 0 48 48">
+        <path fill="url(#grad-blue)" d="M24 4L6 12v10c0 11.1 7.68 21.5 18 24 10.32-2.5 18-12.9 18-24V12L24 4zm0 35.92c-7.9 2.1-14-9.81-14-17.92V13.51l14-6.22 14 6.22v8.49c0 8.11-6.1 20.02-14 17.92z"/>
+        <text x="50%" y="60%" text-anchor="middle" fill="url(#grad-blue)" font-size="8" font-weight="bold">ISO</text>
+    </symbol>
+    <symbol id="icon-cmmi" viewBox="0 0 48 48">
+        <path fill="url(#grad-blue)" d="M24 4l-18 8v10c0 11 7 21 18 24 11-3 18-13 18-24V12L24 4zm14 18c0 9-6 17-14 20-8-3-14-11-14-20V13.5l14-6.2 14 6.2V22z"/>
+        <path fill="url(#grad-blue)" d="M16 28h16v2H16zm0-4h16v2H16zm0-4h16v2H16z" opacity="0.6"/>
+    </symbol>
+    <symbol id="icon-copyright" viewBox="0 0 48 48">
+        <path fill="url(#grad-green)" d="M24 4C12.95 4 4 12.95 4 24s8.95 20 20 20 20-8.95 20-20S35.05 4 24 4zm0 36c-8.82 0-16-7.18-16-16S15.18 8 24 8s16 7.18 16 16-7.18 16-16 16z"/>
+        <path fill="url(#grad-green)" d="M24 16c-4.41 0-8 3.59-8 8s3.59 8 8 8 8-3.59 8-8-3.59-8-8-8zm0 13c-2.76 0-5-2.24-5-5s2.24-5 5-5 5 2.24 5 5-2.24 5-5 5z"/>
+    </symbol>
+</svg>

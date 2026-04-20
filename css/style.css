@@ -1,0 +1,412 @@
+:root {
+    --primary-color: #0176d3;
+    --primary-dark: #014486;
+    --secondary-color: #032d60;
+    --accent-color: #00a1e0;
+    --success-color: #2e844a;
+    --text-color: #181818;
+    --text-light: #444444;
+    --light-gray: #f3f2f2;
+    --white: #ffffff;
+    --border-color: #dddbda;
+    --bg-light: #f4f6f9;
+    --gradient-blue: linear-gradient(135deg, #0176d3 0%, #00a1e0 100%);
+    --shadow-soft: 0 4px 20px rgba(0,0,0,0.05);
+    --shadow-hover: 0 12px 30px rgba(0,0,0,0.12);
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: 'Salesforce Sans', Arial, sans-serif;
+    line-height: 1.6;
+    color: var(--text-color);
+    background-color: var(--white);
+    overflow-x: hidden;
+}
+
+/* Loader */
+#loader {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 9999;
+    transition: opacity 0.5s ease-out;
+}
+
+header {
+    background-color: rgba(255, 255, 255, 0.95);
+    backdrop-filter: blur(10px);
+    box-shadow: 0 2px 10px rgba(0,0,0,0.03);
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 25px;
+}
+
+nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 80px;
+}
+
+.logo img {
+    height: 42px;
+}
+
+.nav-links {
+    display: flex;
+    list-style: none;
+}
+
+.nav-links li {
+    margin-left: 35px;
+}
+
+.nav-links a {
+    text-decoration: none;
+    color: var(--secondary-color);
+    font-weight: 600;
+    font-size: 1rem;
+    transition: color 0.3s;
+}
+
+.nav-links a:hover {
+    color: var(--primary-color);
+}
+
+/* Hero Section */
+.hero {
+    padding: 160px 0 120px;
+    background: radial-gradient(circle at 70% 30%, #eef4ff 0%, #ffffff 100%);
+    text-align: center;
+}
+
+.badge-tag {
+    display: inline-block;
+    padding: 6px 16px;
+    background: rgba(1, 118, 211, 0.1);
+    color: var(--primary-color);
+    border-radius: 50px;
+    font-weight: 700;
+    font-size: 0.9rem;
+    margin-bottom: 20px;
+}
+
+.hero h1 {
+    font-size: 4.5rem;
+    line-height: 1.1;
+    color: var(--secondary-color);
+    margin-bottom: 25px;
+    font-weight: 800;
+}
+
+.text-gradient {
+    background: var(--gradient-blue);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+.hero p {
+    font-size: 1.4rem;
+    color: var(--text-light);
+    max-width: 800px;
+    margin: 0 auto 45px;
+}
+
+/* Buttons */
+.btn {
+    display: inline-block;
+    padding: 16px 40px;
+    border-radius: 50px;
+    text-decoration: none;
+    font-weight: 700;
+    font-size: 1.1rem;
+    transition: all 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+    cursor: pointer;
+    border: none;
+}
+
+.btn-primary {
+    background: var(--gradient-blue);
+    color: var(--white);
+    box-shadow: 0 8px 25px rgba(1, 118, 211, 0.3);
+}
+
+.btn-outline {
+    background-color: var(--white);
+    color: var(--primary-color);
+    border: 2px solid var(--primary-color);
+}
+
+.btn:hover {
+    transform: translateY(-4px);
+}
+
+/* Section Common */
+.section {
+    padding: 100px 0;
+}
+
+.section-title {
+    text-align: center;
+    margin-bottom: 80px;
+}
+
+.section-title h2 {
+    font-size: 3rem;
+    color: var(--secondary-color);
+    font-weight: 800;
+}
+
+.bg-light {
+    background-color: var(--bg-light);
+}
+
+/* Service Cards - Fixed the plain icons */
+.grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+    gap: 40px;
+}
+
+.card {
+    background: white;
+    padding: 50px 40px;
+    border-radius: 30px;
+    box-shadow: var(--shadow-soft);
+    transition: all 0.4s ease;
+    border: 1px solid transparent;
+}
+
+.card:hover {
+    transform: translateY(-10px);
+    box-shadow: var(--shadow-hover);
+    border-color: var(--primary-color);
+}
+
+.card-icon-box {
+    width: 80px;
+    height: 80px;
+    background: #f8fbff;
+    border-radius: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 30px;
+    position: relative;
+    overflow: hidden;
+}
+
+.card-icon-box::after {
+    content: '';
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background: var(--gradient-blue);
+    opacity: 0.1;
+}
+
+.icon-svg {
+    width: 45px;
+    height: 45px;
+    z-index: 1;
+}
+
+/* Floating Animation */
+@keyframes floating {
+    0% { transform: translateY(0px); }
+    50% { transform: translateY(-8px); }
+    100% { transform: translateY(0px); }
+}
+
+.floating {
+    animation: floating 3s ease-in-out infinite;
+}
+
+/* Team Cards - Fixed the plain circles */
+.team-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 50px;
+}
+
+.team-card {
+    background: white;
+    border-radius: 30px;
+    padding: 50px 30px;
+    text-align: center;
+    transition: all 0.4s ease;
+}
+
+.avatar-wrapper {
+    width: 140px;
+    height: 140px;
+    margin: 0 auto 30px;
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.icon-bg {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    border-radius: 50%;
+    opacity: 0.15;
+    filter: blur(10px);
+}
+
+.icon-bg.blue { background-color: #0176d3; }
+.icon-bg.purple { background-color: #6a11cb; }
+.icon-bg.red { background-color: #ff4d4f; }
+
+.team-icon {
+    width: 80px;
+    height: 80px;
+    filter: drop-shadow(0 10px 10px rgba(0,0,0,0.1));
+}
+
+.team-card .role {
+    font-size: 0.85rem;
+    font-weight: 800;
+    text-transform: uppercase;
+    color: var(--primary-color);
+    letter-spacing: 1px;
+    margin-bottom: 10px;
+}
+
+.team-card h4 {
+    font-size: 1.6rem;
+    color: var(--secondary-color);
+    margin-bottom: 15px;
+}
+
+/* Certification Grid - Fixed the small plain cards */
+.certification-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+    gap: 30px;
+}
+
+.cert-item-v2 {
+    background: white;
+    padding: 35px;
+    border-radius: 25px;
+    display: flex;
+    align-items: center;
+    gap: 25px;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.03);
+    transition: all 0.3s ease;
+}
+
+.cert-item-v2:hover {
+    transform: scale(1.03);
+    box-shadow: 0 20px 40px rgba(1, 118, 211, 0.1);
+}
+
+.cert-icon-v2 {
+    width: 90px;
+    height: 90px;
+    border-radius: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    overflow: hidden;
+}
+
+.cert-icon-v2 svg {
+    width: 50px;
+    height: 50px;
+    z-index: 1;
+}
+
+.cert-icon-v2.iso { background: linear-gradient(135deg, #e0f2ff, #ffffff); color: #0070d2; }
+.cert-icon-v2.cmmi { background: linear-gradient(135deg, #f0f5ff, #ffffff); color: #2575fc; }
+.cert-icon-v2.copyright { background: linear-gradient(135deg, #e6fffa, #ffffff); color: #11998e; }
+
+.cert-info h4 {
+    font-size: 1.4rem;
+    color: var(--secondary-color);
+    margin-bottom: 4px;
+}
+
+.cert-info span {
+    font-size: 0.95rem;
+    color: var(--text-light);
+    font-weight: 600;
+}
+
+/* Contact Section */
+.contact-section {
+    background: var(--secondary-color);
+    color: white;
+    padding: 120px 0;
+}
+
+.contact-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 100px;
+    align-items: center;
+}
+
+.contact-card {
+    background: rgba(255,255,255,0.05);
+    padding: 50px;
+    border-radius: 30px;
+    backdrop-filter: blur(10px);
+}
+
+.contact-card a {
+    color: white;
+    text-decoration: none;
+    font-weight: 800;
+}
+
+footer {
+    background: #010e1f;
+    padding: 50px 0;
+    color: rgba(255,255,255,0.5);
+}
+
+.footer-bottom {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.footer-links a {
+    color: inherit;
+    text-decoration: none;
+    margin-left: 20px;
+}
+
+@media (max-width: 992px) {
+    .contact-grid { grid-template-columns: 1fr; gap: 50px; }
+    .hero h1 { font-size: 3.5rem; }
+}
+
+@media (max-width: 768px) {
+    .hero h1 { font-size: 2.8rem; }
+    .nav-links { display: none; }
+}
